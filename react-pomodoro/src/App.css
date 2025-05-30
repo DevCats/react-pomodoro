@@ -1,1 +1,90 @@
 @import 'tailwindcss';
+
+body {
+    margin: 0;
+}
+
+.tInput {
+    border: solid black 1px;
+    height: 4rem;
+    width: 4rem;
+    color: #0c0e1b;
+    text-align: center;
+    font-size: 2rem;
+}
+
+/* Prevents increment/decrement buttons appearing within the input element */
+.tInput::-webkit-inner-spin-button,
+.tInput::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.submitBtn {
+    color: #efefef;
+    font-size: 0.8rem;
+    padding: 0.5rem 1.2rem;
+    border: none;
+    border-radius: 3rem;
+    margin: 0.2rem;
+    background-color: #0c0e1b;
+    min-width: 5rem;
+    cursor: pointer;
+}
+
+/* This is horrible - look for a better way to create a triangular button */
+.incrementBtn {
+    position: relative;
+    width: 22px;
+    height: 17px;
+    border-left: 3px solid transparent;
+    border-bottom: 3px solid;
+    margin-bottom: 0.3rem;
+    cursor: pointer;
+}
+.incrementBtn,
+.incrementBtn::before {
+    display: block;
+    box-sizing: border-box;
+    border-right: 3px solid transparent;
+}
+.incrementBtn::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-left: 3px solid;
+    border-top: 3px solid;
+    border-bottom: 3px solid transparent;
+    transform: rotate(45deg) skew(10deg,10deg);
+    left: -2px;
+    bottom: -13px;
+}
+
+.decrementBtn {
+    position: relative;
+    width: 22px;
+    height: 17px;
+    border-left: 3px solid transparent;
+    border-top: 3px solid;
+    margin-top: 0.3rem;
+    cursor: pointer;
+}
+.decrementBtn,
+.decrementBtn::before {
+    display: block;
+    box-sizing: border-box;
+    border-right: 3px solid transparent;
+}
+.decrementBtn::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-left: 3px solid;
+    border-top: 3px solid;
+    border-bottom: 3px solid transparent;
+    transform: rotate(225deg) skew(10deg,10deg);
+    left: -2px;
+    bottom: 7px;
+}
