@@ -1,8 +1,8 @@
 // Button component
-const Button = ({ title, className, callbackFn }) => {
+const Button = ({ title, id, className, callbackFn }) => {
     return (
         <>
-            <button className={ className } onClick={ callbackFn }>{ title }</button>
+            <button id={id} className={ className } onClick={ callbackFn }>{ title }</button>
         </>
     )
 }

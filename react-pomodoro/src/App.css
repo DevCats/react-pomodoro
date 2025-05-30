@@ -5,10 +5,13 @@ body {
 }
 
 .tInput {
-    border: solid black 1px;
-    height: 4rem;
-    width: 4rem;
-    color: #0c0e1b;
+    border-radius: 50%;
+    height: 6rem;
+    width: 6rem;
+    padding: 1rem;
+    background-color: #0c0e1b;
+    color: #efefef;
+    margin: 0.2rem 0.2rem;
     text-align: center;
     font-size: 2rem;
 }
@@ -30,61 +33,4 @@ body {
     background-color: #0c0e1b;
     min-width: 5rem;
     cursor: pointer;
-}
-
-/* This is horrible - look for a better way to create a triangular button */
-.incrementBtn {
-    position: relative;
-    width: 22px;
-    height: 17px;
-    border-left: 3px solid transparent;
-    border-bottom: 3px solid;
-    margin-bottom: 0.3rem;
-    cursor: pointer;
-}
-.incrementBtn,
-.incrementBtn::before {
-    display: block;
-    box-sizing: border-box;
-    border-right: 3px solid transparent;
-}
-.incrementBtn::before {
-    content: "";
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    border-left: 3px solid;
-    border-top: 3px solid;
-    border-bottom: 3px solid transparent;
-    transform: rotate(45deg) skew(10deg,10deg);
-    left: -2px;
-    bottom: -13px;
-}
-
-.decrementBtn {
-    position: relative;
-    width: 22px;
-    height: 17px;
-    border-left: 3px solid transparent;
-    border-top: 3px solid;
-    margin-top: 0.3rem;
-    cursor: pointer;
-}
-.decrementBtn,
-.decrementBtn::before {
-    display: block;
-    box-sizing: border-box;
-    border-right: 3px solid transparent;
-}
-.decrementBtn::before {
-    content: "";
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    border-left: 3px solid;
-    border-top: 3px solid;
-    border-bottom: 3px solid transparent;
-    transform: rotate(225deg) skew(10deg,10deg);
-    left: -2px;
-    bottom: 7px;
 }
